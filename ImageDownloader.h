@@ -20,7 +20,6 @@ public:
     explicit ImageDownloader(int serverorder = 0, QObject *parent = 0);
     virtual ~ImageDownloader();
     void setFile(QString fileURL, QString fileName);
-    int success;
 private:
 #ifdef MULTIPLE_NETWORK_INSTANCE
     QNetworkAccessManager *manager;

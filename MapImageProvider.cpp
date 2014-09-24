@@ -34,8 +34,7 @@ QPixmap MapImageProvider::requestPixmap(const QString &id, QSize *size, const QS
         QEventLoop loop;
         QObject::connect(imageDownloader,SIGNAL(downloadFinished()),&loop,SLOT(quit()));
         loop.exec();
-        pixmap.load(imagePATH);
-
     }
+    pixmap.load(imagePATH);
     return pixmap;
 }
